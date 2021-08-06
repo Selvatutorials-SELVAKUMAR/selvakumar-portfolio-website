@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+     <!-- TODO: Add SDKs for Firebase products that you want to use
+          https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
+     
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-signup">
+        <h2>Login</h2>
+        <form id = 'login'>
+          <div class="user-box">
+            <input type="email" name="" required="" id='login-email' autocomplete="off">
+            <label>Email</label>
+          </div>
+          <div class="user-box">
+            <input type="password" name="" required="" id = 'login-pwd'  autocomplete="off" style="margin-bottom: 0px;">
+            <label>Password</label>
+          </div>
+          <div class = 'forgot-pwd'>
+            <h4>Forgot Password?</h4>
+          </div>
+         <div class="btn">
+             <button id = 'login-submit'>Submit</button>
+             <div class="loader"> </div>
+         </div>
+         <h4>Create Account ? <span id = 'nav-to-signup'>click here</span></h4>
+        </form>
+      </div>
+      <div class="login-signup" id = 'signupid'>
+        <h2>Sign UP</h2>
+        <form id = 'signup'>
+          <div class="user-box">
+            <input type="text" name="" required="" id = 'signup-username'  autocomplete="off">
+            <label>Username</label>
+          </div>
+          <div class="user-box">
+            <input type="email" name="" required="" id = 'signup-email' autocomplete="off">
+            <label>Email</label>
+          </div>
+          <div class="user-box">
+            <input type="password" name="" required="" id = 'signup-pwd' autocomplete="off">
+            <label>Password</label>
+          </div>
+         <div class="btn">
+             <button id='signup-submit'>Submit</button>
+             <div class="loader"> </div>
+         </div>
+         <h4>Already have an account ? <span id = 'nav-to-login'>Click Here</span></h4>
+        </form>
+      </div>
+      <div class = 'user-details'>
+        <h1>
+
+        </h1>
+        <button></button>
+        <div class = 'about'>
+          <h1>About Me</h1>
+          <img src="./images/WhatsApp Image 2021-08-05 at 9.47.41 AM.jpeg" alt="mypic">
+          <h2>SELVAKUMAR S(MERN STACK DEVELOPER)</h2>
+          <ol start="01">
+            <li>
+              I am a self taught Full Stack Web Developer , currently diving deeper into MERN Stack.
+            </li>
+            <li>
+              Currently working as a freelancer on MERN stack based web application .
+            </li>
+            <li>
+              Having hands on experience in Javascript & ReactJS.
+
+Technologies :
+HTML5 , CSS3 , JavaScript , ReactJS , Formik , NodeJS , ExpressJS , MongoDB , jQuery , Cloud Firestore , Redux , Next.JS , Typescript, Git
+
+Also Interested in :
+DevOps , Blockchain , AWS , Web with ML , chatbot.
+            </li>
+            <li>
+              Also Interested in :
+DevOps , Blockchain , AWS , Web with ML , chatbot.
+            </li>
+            <li>
+              I believe that to be successful in life , one needs to be obessive with their dreams and keep working towards them.
+
+            </li>
+            <li>
+              I like dabbling in various parts of FullStack development and like to learn about new Technologies.
+            </li>
+          </ol>
+          <div class="social-menu">
+            <ul>
+              <li><a href="https://www.facebook.com/profile.php?id=100011238661428"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://www.instagram.com/selvakumar8919/"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="https://www.youtube.com/channel/UCKRu7_iNlR7-IKAYkoTOW7A"><i class="fa fa-youtube"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/selvakumar-s-2b24a4214/"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+          apiKey: "AIzaSyAaQi3ZJ90d_aNH4vZyzYQgo_aTntNFEXg",
+          authDomain: "pro1-a7e07.firebaseapp.com",
+          projectId: "pro1-a7e07",
+          storageBucket: "pro1-a7e07.appspot.com",
+          messagingSenderId: "666331702214",
+          appId: "1:666331702214:web:348cd26061badcfeeb88c7",
+          measurementId: "G-H8DMJRVM4C"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+      </script>
+<script src="app.js"></script>
+</body>
+</html>
