@@ -78,11 +78,15 @@ const userDetails = (id) => {
         details.style.display = 'block'
         details.style.visibility = 'visible'
         logOut.addEventListener('click' , id => {
-            clearInterval(interval)
-            window.localStorage.removeItem('currently_loggedIn')
-            details.style.display = 'none'
-            details.style.visibility = 'hidden'
-            loginForm.style.display = 'block'
+             auth.signOut().then(() => {
+                 clearInterval(interval)
+                window.localStorage.removeItem('currently_loggedIn')
+                details.style.display = 'none'
+                   details.style.visibility = 'hidden'
+                loginForm.style.display = 'block'
+            }).catch(() => {
+                console.log(`Error occurred while sign out`)
+            })
         })
     } else {
         // doc.data() will be undefined in this case
